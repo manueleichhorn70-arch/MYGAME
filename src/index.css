@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-lumen: #f2b705;
+  --color-umbra: #7d44b1;
+  --color-flux: #00f2ff;
+  --color-echo: #e0e0e0;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white;
+  }
+}
+
+@layer utilities {
+  .layer-grid {
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glitch-overlay {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0%,
+      rgba(0, 242, 255, 0.02) 0.5%,
+      transparent 1%
+    );
+    animation: scanlines 10s linear infinite;
+    pointer-events: none;
+  }
+
+  .crt-effect::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    z-index: 2;
+    background-size: 100% 4px, 6px 100%;
+    pointer-events: none;
+  }
+
+  .chromatic-aberration {
+    text-shadow: 2px 0 rgba(255,0,0,0.5), -2px 0 rgba(0,0,255,0.5);
+  }
+
+  @keyframes scanlines {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+  }
+}

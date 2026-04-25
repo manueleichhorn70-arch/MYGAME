@@ -1,0 +1,15 @@
+{
+  "short_name": "SHIFTR",
+  "name": "SHIFTR: Dimension Protocol",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layers-2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00f2ff",
+  "background_color": "#050505"
+}
