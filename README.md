@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# SHIFTR: Dimension Protocol
 
-# Run and deploy your AI Studio app
+A high-octane precision platformer where you shift between four dimensions to survive.
 
-This contains everything you need to run your app locally.
+## Features
+- **Dimension Shifting**: Master 4 unique dimensions (Lumen, Umbra, Flux, Echo).
+- **130+ Levels**: Progress through increasingly difficult sectors.
+- **Level Architect**: Build and play your own custom levels.
+- **Dimensional Vault**: Unlock legendary skins with collected shards.
 
-View your app in AI Studio: https://ai.studio/apps/2dd64631-eaab-47df-8c5a-55291fdcd52d
+## Local Development
 
-## Run Locally
+### 1. Install Dependencies
+```bash
+npm install
+```
 
-**Prerequisites:**  Node.js
+### 2. Run Development Server
+```bash
+npm run dev
+```
+The game will be available at `http://localhost:3000`.
 
+### 3. Build for Production
+```bash
+npm run build
+```
+Static files will be generated in the `dist/` directory.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deployment
+
+This repository is configured to deploy to **GitHub Pages** automatically on push to the `main` branch. 
+
+To enable this:
+1. Go to your repository **Settings** on GitHub.
+2. Go to **Pages** in the sidebar.
+3. Under **Build and deployment > Source**, select **GitHub Actions**.
+
+## Credits
+Built with React, Vite, and ❤️ in AI Studio.
